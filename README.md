@@ -1,2 +1,2 @@
 # rust_playground
-Rust playground
+Rust playground for practice only
