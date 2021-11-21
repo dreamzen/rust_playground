@@ -15,13 +15,10 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 }
 
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let mut result = Vec::new();
-    for line in contents.lines() {
-        if line.contains(query) {
-            result.push(line);
-        }
-    }
-    return result;
+    return contents
+        .lines()
+        .filter(|line| line.contains(query))
+        .collect();
 }
 
 pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
@@ -42,15 +39,26 @@ pub struct Config {
 }
 
 impl Config {
-    pub fn new(args: &[String]) -> Result<Config, &str> {
-        if args.len() < 3 {
-            return Err("args are not enough");
-        }
-        let case_insensitive = env::var("CASE_INSENSITIVE").is_err();
+    pub fn new<T>(mut args: T) -> Result<Config, &'static str>
+    where
+        T: Iterator<Item = String>,
+    {
+        args.next();
+
+        let query = match args.next() {
+            Some(a) => a,
+            None => return Err("didn't read query"),
+        };
+        let filename = match args.next() {
+            Some(a) => a,
+            None => return Err("didn't read filename"),
+        };
+
+        let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
         Ok(Config {
-            query: args[1].clone(),
-            filename: args[2].clone(),
-            case_sensitive: case_insensitive,
+            query,
+            filename,
+            case_sensitive,
         })
     }
 }
@@ -61,8 +69,8 @@ mod tests {
 
     #[test]
     fn test_config_new() {
-        let args = ["".to_string(), "query".to_string(), "path".to_string()];
-        assert_eq!("query".to_string(), Config::new(&args[..]).expect("").query);
+        let args = ["app", "query", "path"].iter().map(|s| s.to_string());
+        assert_eq!("query".to_string(), Config::new(args).expect("").query);
     }
 
     #[test]
