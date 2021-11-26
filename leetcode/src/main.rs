@@ -10,6 +10,7 @@ mod regular_expression_matching;
 mod reverse_integer;
 mod string_to_integer;
 mod three_sum;
+mod three_sum_closest;
 mod two_sum;
 mod zigzag_conversion;
 
