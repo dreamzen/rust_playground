@@ -1,3 +1,4 @@
+mod accounts_merge;
 mod add_two_numbers;
 mod container_with_most_water;
 mod four_sum;
