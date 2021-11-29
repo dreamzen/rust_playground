@@ -1,5 +1,6 @@
 mod add_two_numbers;
 mod container_with_most_water;
+mod four_sum;
 mod letter_combinations_of_a_phone_number;
 mod list_node;
 mod longest_common_prefix;
