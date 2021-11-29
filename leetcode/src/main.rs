@@ -16,6 +16,7 @@ mod string_to_integer;
 mod three_sum;
 mod three_sum_closest;
 mod two_sum;
+mod valid_parentheses;
 mod zigzag_conversion;
 
 fn main() {
