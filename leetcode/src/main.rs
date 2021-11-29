@@ -9,6 +9,7 @@ mod longest_substring_without_repeating_characters;
 mod median_of_two_sorted_arrays;
 mod palindrome_number;
 mod regular_expression_matching;
+mod remove_nth_node_from_end_of_list;
 mod reverse_integer;
 mod string_to_integer;
 mod three_sum;
