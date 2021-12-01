@@ -22,16 +22,27 @@ impl Solution {
 
         while list1.is_some() && list2.is_some() {
             if list1.as_ref().unwrap().val <= list2.as_ref().unwrap().val {
-                // `to_owned()` will clone the data from borrowed data
-                let tmp = list1.as_ref().unwrap().next.to_owned();
+                // old version: `to_owned()` will clone the data from borrowed data
+                // let tmp = list1.as_ref().unwrap().next.to_owned();
+                // tail.next = list1.take();
+                // tail = tail.next.as_mut().unwrap();
+                // list1 = tmp;
+
+                // better version: without data clone
                 tail.next = list1.take();
                 tail = tail.next.as_mut().unwrap();
-                list1 = tmp;
+                list1 = tail.next.take();
             } else {
-                let tmp = list2.as_ref().unwrap().next.to_owned();
+                // old version: `to_owned()` will clone the data from borrowed data
+                // let tmp = list2.as_ref().unwrap().next.to_owned();
+                // tail.next = list2.take();
+                // tail = tail.next.as_mut().unwrap();
+                // list2 = tmp;
+
+                // better version: without data clone
                 tail.next = list2.take();
                 tail = tail.next.as_mut().unwrap();
-                list2 = tmp;
+                list2 = tail.next.take();
             }
         }
 
@@ -90,7 +101,9 @@ mod tests {
 
         // `to_owned()` will clone the data..
         // so except for node1 and node3 (the first node of the 2 lists),
-        // all other nodes' addresses are changed
+        // all other nodes' addresses are changed.
+        // With better version, addresses of all the nodes are unchanged!
+
         let mut node = result.take().unwrap();
         println!("address of result's node1 on heap = {:p}", &*node);
         node = node.next.take().unwrap();
