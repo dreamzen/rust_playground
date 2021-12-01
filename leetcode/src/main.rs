@@ -2,6 +2,7 @@ mod accounts_merge;
 mod add_two_numbers;
 mod container_with_most_water;
 mod four_sum;
+mod generate_parentheses;
 mod house_robber;
 mod largest_rectangle_in_histogram;
 mod letter_combinations_of_a_phone_number;
