@@ -14,6 +14,7 @@ mod maximal_rectangle;
 mod median_of_two_sorted_arrays;
 mod merge_k_sorted_lists;
 mod merge_two_sorted_lists;
+mod odd_even_linked_list;
 mod palindrome_number;
 mod regular_expression_matching;
 mod remove_nth_node_from_end_of_list;
