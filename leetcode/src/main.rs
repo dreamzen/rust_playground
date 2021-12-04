@@ -19,6 +19,7 @@ mod palindrome_number;
 mod regular_expression_matching;
 mod remove_nth_node_from_end_of_list;
 mod reverse_integer;
+mod stream_of_characters;
 mod string_to_integer;
 mod swap_nodes_in_pairs;
 mod three_sum;
