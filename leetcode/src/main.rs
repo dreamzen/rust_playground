@@ -17,6 +17,7 @@ mod merge_two_sorted_lists;
 mod odd_even_linked_list;
 mod palindrome_number;
 mod regular_expression_matching;
+mod remove_duplicates_from_sorted_array;
 mod remove_nth_node_from_end_of_list;
 mod reverse_integer;
 mod stream_of_characters;
