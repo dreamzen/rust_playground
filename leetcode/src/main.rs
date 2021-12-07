@@ -1,6 +1,7 @@
 mod accounts_merge;
 mod add_two_numbers;
 mod container_with_most_water;
+mod convert_binary_number_in_a_linked_list_to_integer;
 mod delete_the_middle_node_of_a_linked_list;
 mod four_sum;
 mod generate_parentheses;
