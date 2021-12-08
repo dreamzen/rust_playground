@@ -10,7 +10,7 @@ impl Solution {
             if digits[i] == 0 {
                 continue;
             }
-            if i > 0 && digits[i] == digits[i - 1]{
+            if i > 0 && digits[i] == digits[i - 1] {
                 continue;
             }
             let mut last_j_value = 10;
