@@ -9,6 +9,7 @@ mod four_sum;
 mod generate_parentheses;
 mod house_robber;
 mod house_robber_3;
+mod jump_game_3;
 mod largest_rectangle_in_histogram;
 mod letter_combinations_of_a_phone_number;
 mod list_node;
