@@ -24,6 +24,7 @@ mod merge_two_sorted_lists;
 mod minimum_cost_to_move_chips_to_the_same_position;
 mod odd_even_linked_list;
 mod palindrome_number;
+mod range_sum_of_bst;
 mod regular_expression_matching;
 mod remove_duplicates_from_sorted_array;
 mod remove_nth_node_from_end_of_list;
