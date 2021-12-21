@@ -27,6 +27,7 @@ mod minimum_absolute_difference;
 mod minimum_cost_to_move_chips_to_the_same_position;
 mod odd_even_linked_list;
 mod palindrome_number;
+mod power_of_two;
 mod range_sum_of_bst;
 mod regular_expression_matching;
 mod remove_duplicates_from_sorted_array;
