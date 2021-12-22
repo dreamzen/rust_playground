@@ -32,6 +32,7 @@ mod range_sum_of_bst;
 mod regular_expression_matching;
 mod remove_duplicates_from_sorted_array;
 mod remove_nth_node_from_end_of_list;
+mod reorder_list;
 mod reverse_integer;
 mod reverse_nodes_in_k_group;
 mod step_by_step_directions_from_a_binary_tree_node_to_another;
