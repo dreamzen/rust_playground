@@ -31,6 +31,7 @@ mod power_of_two;
 mod range_sum_of_bst;
 mod regular_expression_matching;
 mod remove_duplicates_from_sorted_array;
+mod remove_minimum_and_maximum_from_array;
 mod remove_nth_node_from_end_of_list;
 mod reorder_list;
 mod reverse_integer;
