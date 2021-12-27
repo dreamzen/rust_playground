@@ -21,6 +21,7 @@ mod longest_substring_without_repeating_characters;
 mod maximal_rectangle;
 mod maximal_square;
 mod median_of_two_sorted_arrays;
+mod merge_intervals;
 mod merge_k_sorted_lists;
 mod merge_two_sorted_lists;
 mod minimum_absolute_difference;
