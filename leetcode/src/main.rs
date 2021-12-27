@@ -26,6 +26,7 @@ mod merge_k_sorted_lists;
 mod merge_two_sorted_lists;
 mod minimum_absolute_difference;
 mod minimum_cost_to_move_chips_to_the_same_position;
+mod number_complement;
 mod odd_even_linked_list;
 mod palindrome_number;
 mod power_of_two;
