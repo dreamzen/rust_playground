@@ -24,6 +24,7 @@ mod median_of_two_sorted_arrays;
 mod merge_intervals;
 mod merge_k_sorted_lists;
 mod merge_two_sorted_lists;
+mod middle_of_the_linked_list;
 mod minimum_absolute_difference;
 mod minimum_cost_to_move_chips_to_the_same_position;
 mod number_complement;
